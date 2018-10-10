@@ -51,8 +51,9 @@ d3.csv("roomData.csv", function(error, data) {
       .call(xAxis)
       .selectAll('.x.axis text')
           .attr('transform', 'rotate(-65)') 
-          .attr('x', '-15px')  
-          .attr('y', '4 px');
+          .attr('x', '-15px');
+         // .attr('y', '4 px');
+     
 
   svg.append("g")
       .attr("class", "y axis")
@@ -182,7 +183,7 @@ d3.csv("roomData.csv", function(error, data) {
       .data(elements)
       .enter().append("option")
       .attr("value", function(d){
-          console.log(d)
+          //console.log(d)
         return d;
       })
       .text(function(d){
